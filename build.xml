@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+ <project name="Sudoku-src" default="run">
+     <!-- define names of directories -->
+     <property name="src" location="oyg"/>
+     <property name="deps" location="org"/>
+     <property name="build" location="build"/>
+     <property name="classes" location="${build}/classes"/>
+     <!-- define all targets -->
+     <target name="compile">
+         <mkdir dir="${classes}"/>
+         <javac srcdir="${deps}" destdir="${classes}"/>
+         <javac srcdir="${src}" destdir="${classes}"/>
+     </target>
+     <target name="clean">
+         <delete dir="${build}"/>
+     </target>
+ </project>
