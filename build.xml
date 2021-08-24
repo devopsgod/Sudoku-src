@@ -11,6 +11,9 @@
          <javac srcdir="${deps}" destdir="${classes}"/>
          <javac srcdir="${src}" destdir="${classes}"/>
      </target>
+     <target name="run" depends="compile">
+         <java classname="${ant.project.name}" classpath="${classes}"/>
+     </target>
      <target name="clean">
          <delete dir="${build}"/>
      </target>
